@@ -1,0 +1,24 @@
+{
+  "name": "smart-things-node-trigger",
+  "version": "0.0.1",
+  "description": "Simple node script that uses the things API to trigger scenes which then can called from Alfred",
+  "main": "scenes.js",
+  "scripts": {
+    "scences": "node scenes.js"
+  },
+  "dependencies": {
+    "@smartthings/core-sdk": "^0.2.9",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.1"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/hello-express"
+  },
+  "license": "MIT",
+  "volta": {
+    "node": "12.20.1"
+  }
+}
