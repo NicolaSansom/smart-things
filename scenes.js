@@ -10,11 +10,11 @@ const listScenes = () => {
 }
 
 const executeMovieMode = () => {
-  client.scenes.execute('0ca9d064-06c0-4e4e-9d61-516a100c008b').catch(() => '');
+  client.scenes.execute(process.env.MOVIE_MODE).catch(() => '');
 }
 
 const executeGoMode = () => {
-  client.scenes.execute('8c2c1809-377f-4a15-9818-0d5096b52537').catch(() => '');
+  client.scenes.execute(process.env.GAME_MODE).catch(() => '');
 }
 
 listScenes();
