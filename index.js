@@ -1,4 +1,3 @@
-const fetch = require('node-fetch');
 require('dotenv').config();
 const {SmartThingsClient, BearerTokenAuthenticator} = require('@smartthings/core-sdk')
 const client = new SmartThingsClient(new BearerTokenAuthenticator(process.env.PAT));
@@ -17,4 +16,4 @@ const executeGoMode = () => {
   client.scenes.execute(process.env.GAME_MODE).catch(() => '');
 }
 
-listScenes();
+executeMovieMode();
