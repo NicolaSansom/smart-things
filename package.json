@@ -4,7 +4,9 @@
   "description": "Simple node script that uses the things API to trigger scenes which then can called from Alfred",
   "main": "index.js",
   "scripts": {
-    "scences": "node index.js"
+    "scences": "node index.js",
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup"
   },
   "dependencies": {
     "@smartthings/core-sdk": "^0.2.9",
