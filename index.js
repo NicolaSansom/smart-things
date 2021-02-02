@@ -16,4 +16,4 @@ const executeGoMode = () => {
   client.scenes.execute(process.env.GAME_MODE).catch(() => '');
 }
 
-executeMovieMode();
+executeGoMode();
