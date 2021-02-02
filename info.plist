@@ -36,11 +36,11 @@
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>scene movie</string>
+				<string>scene</string>
 				<key>subtext</key>
 				<string>Show '{query}' across the screen</string>
 				<key>text</key>
-				<string>Movie Mode</string>
+				<string>Scene</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -90,7 +90,7 @@ Type your keyword into Alfred, followed by your input text if needed, and you'll
 			<key>xpos</key>
 			<integer>50</integer>
 			<key>ypos</key>
-			<integer>50</integer>
+			<integer>80</integer>
 		</dict>
 		<key>637496F3-63F5-453B-BF7B-C0C24620E501</key>
 		<dict>
