@@ -21,13 +21,13 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Vero Pepperrell</string>
+	<string>Nicola Sansom</string>
 	<key>description</key>
-	<string>Learn how to connect a keyword to different actions and outputs</string>
+	<string></string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Keywords - Getting Started</string>
+	<string>Smart Things</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -127,6 +127,6 @@ Type your keyword into Alfred, followed by your input text if needed, and you'll
 	<key>version</key>
 	<string>1.0</string>
 	<key>webaddress</key>
-	<string>https://www.alfredapp.com</string>
+	<string>https://github.com/NicolaSansom/smart-things</string>
 </dict>
 </plist>
