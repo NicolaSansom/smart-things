@@ -6,11 +6,11 @@
 	<string>com.alfredapp.vero.gettingstarted.keywords</string>
 	<key>connections</key>
 	<dict>
-		<key>3E554F3A-9D95-4D8B-9797-FDE6FDA14DCD</key>
+		<key>83C44035-7184-4EC6-9CA0-9B3B8914344E</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>637496F3-63F5-453B-BF7B-C0C24620E501</string>
+				<string>BD254F0C-0258-4689-8334-ACDCEF03FDEC</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -33,33 +33,12 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>scene</string>
-				<key>subtext</key>
-				<string>Show '{query}' across the screen</string>
-				<key>text</key>
-				<string>Scene</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>3E554F3A-9D95-4D8B-9797-FDE6FDA14DCD</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./node_modules/.bin/run-node index.js "$1"</string>
+				<string>./node_modules/.bin/run-node execute.js "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -70,9 +49,58 @@
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>637496F3-63F5-453B-BF7B-C0C24620E501</string>
+			<string>BD254F0C-0258-4689-8334-ACDCEF03FDEC</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>st</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node index.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Smart things</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>83C44035-7184-4EC6-9CA0-9B3B8914344E</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -81,23 +109,19 @@
 Type your keyword into Alfred, followed by your input text if needed, and you'll be on your way to boosting your productivity!</string>
 	<key>uidata</key>
 	<dict>
-		<key>3E554F3A-9D95-4D8B-9797-FDE6FDA14DCD</key>
+		<key>83C44035-7184-4EC6-9CA0-9B3B8914344E</key>
 		<dict>
-			<key>colorindex</key>
-			<integer>4</integer>
-			<key>note</key>
-			<string>1. Add a keyword object by right-clicking the canvas and choosing Inputs &gt; Keyword. Set the keyword and title to show it in Alfred's results.</string>
 			<key>xpos</key>
-			<integer>50</integer>
+			<integer>85</integer>
 			<key>ypos</key>
-			<integer>80</integer>
+			<integer>105</integer>
 		</dict>
-		<key>637496F3-63F5-453B-BF7B-C0C24620E501</key>
+		<key>BD254F0C-0258-4689-8334-ACDCEF03FDEC</key>
 		<dict>
 			<key>xpos</key>
-			<integer>350</integer>
+			<integer>285</integer>
 			<key>ypos</key>
-			<integer>80</integer>
+			<integer>105</integer>
 		</dict>
 	</dict>
 	<key>version</key>

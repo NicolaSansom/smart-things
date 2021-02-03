@@ -4,7 +4,7 @@
   "description": "Simple node script that uses the things API to trigger scenes which then can called from Alfred",
   "main": "index.js",
   "scripts": {
-    "scences": "node index.js",
+    "start": "node index.js",
     "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup"
   },

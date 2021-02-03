@@ -2,27 +2,24 @@ require('dotenv').config();
 const {SmartThingsClient, BearerTokenAuthenticator} = require('@smartthings/core-sdk')
 const client = new SmartThingsClient(new BearerTokenAuthenticator(process.env.PAT));
 const alfy = require('alfy');
-
-const listScenes = () => {
-  client.scenes.list().then(scenes => {
-    console.log('scenes', scenes)
- });
-}
-
-const executeMovieMode = () => {
-  client.scenes.execute(process.env.MOVIE_MODE).catch(() => '');
-}
-
-const executeGoMode = () => {
-  client.scenes.execute(process.env.GAME_MODE).catch(() => '');
-}
-
 const input = await alfy.input;
 
-if(input === 'movie') {
-  return executeMovieMode();
+const listScenes = () => {
+  return client.scenes.list();
 }
 
-if(input === 'go') {
-  return executeGoMode();
+const getScenes = async () => {
+  const scenes = await listScenes();
+  const options = scenes && scenes.map(({sceneName, sceneId}) => {
+    return {
+      title: sceneName,
+      arg: sceneId,
+    }
+  });
+  return options;
+}
+
+if(input === 'scenes') {
+  const scenes = await getScenes();
+  return alfy.output(scenes);
 }
