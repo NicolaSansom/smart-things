@@ -12,14 +12,14 @@ const getScenes = async () => {
   const scenes = await listScenes();
   const options = scenes && scenes.map(({sceneName, sceneId}) => {
     return {
-      title: sceneName,
+      title: `🛋️  ${sceneName}`,
       arg: sceneId,
     }
   });
   return options;
 }
 
-if(input === 'scenes') {
+if(input === 'scenes' || input === 's') {
   const scenes = await getScenes();
   return alfy.output(scenes);
 }
