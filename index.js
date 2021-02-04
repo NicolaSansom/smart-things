@@ -17,7 +17,7 @@ const getScenes = async () => {
   const options = scenes && scenes.map(({sceneName, sceneId}) => {
     return {
       title: `🛋️  ${sceneName}`,
-      arg: sceneId,
+      arg: {id: sceneId, capability:'scene'},
     }
   });
   return options;
@@ -30,7 +30,7 @@ const getDevices = async () => {
     const icon = deviceIcon === 'Light' ? '💡' : 'something';
     return {
       title: `${icon} ${label}`,
-      arg: deviceId,
+      arg: {id: deviceId, capability:'switch', command: 'on'},
     }
   });
 
