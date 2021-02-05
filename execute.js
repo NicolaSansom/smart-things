@@ -4,21 +4,21 @@ const { SmartThingsClient, BearerTokenAuthenticator } = require('@smartthings/co
 const client = new SmartThingsClient(new BearerTokenAuthenticator(process.env.PAT))
 const alfy = require('alfy')
 const input = alfy.input
-const format = input.match(/([\w+]+)/g)
+const format = input.split(' ')
 const [id, capability, command] = format
 
 export const excuteDeviceCommand = (id, command) => {
-  client.devices.execute(input, [{ capability: 'switch', command }]).catch(() => '')
+  client.devices.executeCommand(id, { capability: 'switch', command }).catch(() => null)
 }
 
 const executeScene = (deviceId) => {
   client.scenes.execute(deviceId).catch(() => '')
 }
 
-if (capability === 'scenes') {
+if (capability === 'scene') {
   executeScene(id)
 }
 
 if (capability === 'switch') {
-  executeScene(id, command)
+  excuteDeviceCommand(id, command)
 }
